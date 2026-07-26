@@ -2,11 +2,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
-const vercelProductionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-const siteHostname =
-  process.env.VERCEL === "1" && vercelProductionHost
-    ? `https://${vercelProductionHost}`
-    : "https://davidyang0429.github.io";
+const siteHostname = "https://mscbis.vercel.app";
 
 export default hopeTheme({
   hostname: siteHostname,
@@ -105,13 +101,17 @@ export default hopeTheme({
       assets: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
     },
     blog: true,
-    // You should generate and use your own comment service    
-    comment: {
-      provider: "Giscus",
-      repo: "DavidYang0429/MScBIS",
-      repoId: "R_kgDOTjvYPg",
-      category: "Announcements",
-      categoryId: "DIC_kwDOTjvYPs4DB_Ih",
+    // Comments are rendered by the custom community-comments plugin so that
+    // legacy and current Discussions can coexist without changing authorship.
+    comment: false,
+
+    seo: {
+      canonical: ({ path }) => new URL(path, siteHostname).href,
+      fallBackImage: `${siteHostname}/assets/image/social-preview.png`,
+      ogp: (ogp, { path }) => ({
+        ...ogp,
+        "og:url": new URL(path, siteHostname).href,
+      }),
     },
 
         components: {

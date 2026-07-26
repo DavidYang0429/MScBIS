@@ -10,7 +10,9 @@ next: false
 
 新版 BIS Navigator 采用公开协作方式维护。发现过期信息、失效链接或缺失课程时，请前往项目 GitHub 仓库提交 Issue；愿意整理新一届经验的同学，也可以通过 Pull Request 贡献 Markdown 内容。
 
-- [提交内容过期或错误问题](https://github.com/DavidYang0429/MScBIS/issues/new)
+- [提交内容过期或错误问题](https://github.com/DavidYang0429/MScBIS/issues/new?template=content-outdated.yml)
+- [补充一份课程评价](https://github.com/DavidYang0429/MScBIS/issues/new?template=course-review.yml)
+- [阅读完整贡献指南](https://github.com/DavidYang0429/MScBIS/blob/main/CONTRIBUTING.md)
 - [查看并参与 Pull Request](https://github.com/DavidYang0429/MScBIS/pulls)
 
 - 每条高时效事实请尽量附上 CityU 官方来源与核验日期。
@@ -19,7 +21,7 @@ next: false
 
 ::: info 内容状态
 **最后更新：** 2026-07-26<br>
-**当前入口：** GitHub Issue 与 Pull Request<br>
+**当前入口：** GitHub Issue 表单、贡献指南与 Pull Request<br>
 **历史内容：** 下方为原项目的 2025 招募记录，作为项目沿革保留，不代表 2026/27 仍采用简历、笔试、面试或邮件投递。
 :::
 

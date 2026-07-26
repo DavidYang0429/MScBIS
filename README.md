@@ -6,11 +6,15 @@
 
 在线阅读：[BIS Navigator](https://mscbis.vercel.app/)
 
+发现内容过期、想补充课程评价或参与维护，请阅读 [贡献指南](./CONTRIBUTING.md)。页面底部的社区讨论分为旧站历史评论与新评论区，历史评论继续保留原作者和 Discussion 记录。
+
 ## 内容状态
 
 本站将内容区分为当前已核验资料、历史经验、待复核资料和社区档案。课程开设、教师、考核、名额、签证、住宿和认证等高时效信息，必须同时写明适用学年、核验日期与官方来源。
 
 完整规则见 [内容状态与维护规则](./CONTENT_MAINTENANCE.md)。
+
+依赖升级边界与当前技术基线见 [依赖维护记录](./DEPENDENCY_MAINTENANCE.md)。
 
 ## 本地开发
 
@@ -22,7 +26,7 @@ pnpm docs:dev
 构建静态站点：
 
 ```bash
-pnpm docs:build
+pnpm docs:check
 ```
 
 ## 内容来源与授权

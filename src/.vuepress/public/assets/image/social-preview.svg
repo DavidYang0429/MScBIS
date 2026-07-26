@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#fbf8f2"/>
+  <rect x="48" y="48" width="1184" height="544" fill="none" stroke="#d7d0c4" stroke-width="2"/>
+  <rect x="48" y="48" width="10" height="544" fill="#922f40"/>
+
+  <g transform="translate(112 105)">
+    <text x="0" y="0" fill="#922f40" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="22" font-weight="700" letter-spacing="3">
+      CITYUHK MSC BIS · 学生共建手册
+    </text>
+    <text x="0" y="112" fill="#18283c" font-family="Songti SC, Noto Serif SC, serif" font-size="82" font-weight="600">
+      BIS Navigator
+    </text>
+    <text x="0" y="180" fill="#334154" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="34" font-weight="500">
+      从录取到毕业，把 BIS 读明白
+    </text>
+    <line x1="0" y1="224" x2="610" y2="224" stroke="#d7d0c4" stroke-width="2"/>
+
+    <g transform="translate(0 270)" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="21" font-weight="600">
+      <rect x="0" y="0" width="144" height="48" fill="#e9ece3"/>
+      <text x="72" y="31" fill="#334154" text-anchor="middle">入学生活</text>
+      <rect x="160" y="0" width="144" height="48" fill="#e9ece3"/>
+      <text x="232" y="31" fill="#334154" text-anchor="middle">课程选课</text>
+      <rect x="320" y="0" width="144" height="48" fill="#e9ece3"/>
+      <text x="392" y="31" fill="#334154" text-anchor="middle">实习发展</text>
+      <rect x="480" y="0" width="144" height="48" fill="#e9ece3"/>
+      <text x="552" y="31" fill="#334154" text-anchor="middle">历届经验</text>
+    </g>
+
+    <text x="0" y="398" fill="#71796f" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="19">
+      民间维护 · 非 CityU 官方网站 · 2026/27
+    </text>
+  </g>
+
+  <g transform="translate(980 318)">
+    <circle r="188" fill="#f3efe7" stroke="#d7d0c4" stroke-width="2"/>
+    <circle r="146" fill="none" stroke="#87917f" stroke-width="2"/>
+    <circle r="20" fill="#922f40"/>
+    <line x1="-164" y1="0" x2="164" y2="0" stroke="#c5b9a7" stroke-width="2"/>
+    <line x1="0" y1="-164" x2="0" y2="164" stroke="#c5b9a7" stroke-width="2"/>
+    <line x1="-116" y1="-116" x2="116" y2="116" stroke="#ded9cf" stroke-width="2"/>
+    <line x1="116" y1="-116" x2="-116" y2="116" stroke="#ded9cf" stroke-width="2"/>
+    <path d="M0 -126 L30 -18 L0 4 L-30 -18 Z" fill="#922f40"/>
+    <path d="M0 126 L-30 18 L0 -4 L30 18 Z" fill="#18283c"/>
+    <text x="0" y="-154" fill="#18283c" font-family="Georgia, serif" font-size="28" font-weight="700" text-anchor="middle">N</text>
+
+    <g transform="translate(-68 66)">
+      <path d="M0 0 C42 -14 70 -8 88 8 L88 74 C64 58 38 54 0 66 Z" fill="#fffdf8" stroke="#18283c" stroke-width="4"/>
+      <path d="M0 0 C-42 -14 -70 -8 -88 8 L-88 74 C-64 58 -38 54 0 66 Z" fill="#fffdf8" stroke="#18283c" stroke-width="4"/>
+      <line x1="0" y1="0" x2="0" y2="66" stroke="#922f40" stroke-width="4"/>
+    </g>
+  </g>
+</svg>
