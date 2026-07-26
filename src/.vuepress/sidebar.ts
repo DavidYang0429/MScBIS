@@ -1,6 +1,32 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
+  "/Career/": [
+    "/Career/",
+    {
+      text: "实习与求职",
+      icon: "bi-briefcase",
+      children: ["internship-and-services", "work-and-iang"],
+    },
+  ],
+  "/Reference/": [
+    "/Reference/",
+    {
+      text: "出发前",
+      icon: "bi-airplane",
+      children: ["before-arrival"],
+    },
+    {
+      text: "城大入学",
+      icon: "bi-building",
+      children: ["cityu-onboarding", "course-registration"],
+    },
+    {
+      text: "抵港生活",
+      icon: "bi-house-door",
+      children: ["housing", "arrival", "safety"],
+    },
+  ],
   "/MIS/": [
     "/MIS/",
     {

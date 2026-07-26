@@ -231,6 +231,83 @@ body {
     border-color: #ded9cf;
 }
 
+.reference-lead {
+    margin: 1.5rem 0 2rem;
+    padding: 1.35rem 1.5rem;
+    border: 1px solid #d7d0c4;
+    border-left: 4px solid #922f40;
+    background: #f8f5ee;
+    color: #273649;
+}
+
+.reference-page .vp-page-title {
+    display: none;
+}
+
+.reference-lead p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+.reference-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.reference-card {
+    display: block;
+    padding: 1.2rem 1.25rem;
+    border: 1px solid #d7d0c4;
+    background: #fffdf8;
+    color: #18283c;
+    text-decoration: none;
+    transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.reference-card:hover {
+    border-color: #922f40;
+    color: #18283c;
+    transform: translateY(-2px);
+}
+
+.reference-card strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #7d2738;
+    font-family: var(--font-family-heading);
+    font-size: 1.05rem;
+}
+
+.reference-card span {
+    display: block;
+    color: #526071;
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.reference-update-log {
+    margin: 1.25rem 0;
+    padding-left: 1.1rem;
+    border-left: 2px solid #c5b9a7;
+}
+
+.reference-update-log p {
+    margin: 0.35rem 0;
+}
+
+@media (max-width: 719px) {
+    .reference-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reference-lead {
+        padding: 1.1rem 1.15rem;
+    }
+}
+
 @media (max-width: 719px) {
     .vp-navbar {
         background: #fbf8f2;
