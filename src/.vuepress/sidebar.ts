@@ -77,4 +77,5 @@ export default sidebar({
       children: "structure",
     },
   ],
+  "/": false,
 });

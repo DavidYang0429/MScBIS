@@ -29,11 +29,5 @@
   },
   "dependencies": {
     "@vuepress/plugin-pwa": "2.0.0-rc.112"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "core-js",
-      "esbuild"
-    ]
   }
 }

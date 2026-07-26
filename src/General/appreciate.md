@@ -5,6 +5,13 @@ comment: false
 prev: false
 next: false
 ---
+
+::: info 内容状态｜社区档案
+**状态标记：** 2026-07-26<br>
+**当前用途：** 保留项目沿革、贡献者信息与往届学生经验。<br>
+**使用边界：** 人员、联系方式和届别信息按其原始年份理解；涉及当前维护方式时，以 GitHub 仓库和“参与维护”页面为准。
+:::
+
 ![Master of Science in Business Information Systems](/BISlogo.jpg)
 
 感谢以下16、17、18、20、21、22届学长学姐对于此站点的内容贡献，没有他们就没有今天的本站！

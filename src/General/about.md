@@ -6,6 +6,13 @@ heroText: 关于本站
 tagline: About BIS Navigator
 ---
 
+::: info 内容状态｜社区档案
+**状态标记：** 2026-07-26<br>
+**当前用途：** 保留项目沿革、贡献者信息与往届学生经验。<br>
+**使用边界：** 人员、联系方式和届别信息按其原始年份理解；涉及当前维护方式时，以 GitHub 仓库和“参与维护”页面为准。
+:::
+
+
 ## 资料如何维护
 
 BIS Navigator 将内容分为两类：课程结构、申请规则与系统流程等高时效事实，以 CityU 公开页面、官方系统和正式通知为准；选课感受、学习方法与职业经验等学生视角内容，保留贡献届别和经验属性。
@@ -36,13 +43,13 @@ BIS Navigator 将内容分为两类：课程结构、申请规则与系统流程
 
 ## 作者
   
-**<font color=#b01861>汪冠彰 (Mr. WANG Guanzhang) "Steve"</font>**
+**<span style="color: #b01861">汪冠彰 (Mr. WANG Guanzhang) "Steve"</span>**
 
 *MSc - Business Information Systems (City University of Hong Kong)*
 
 *BMgt - Information Management and Information Systems (Kunming University of Science and Technology)*
 
-**<font color=#b01861>Administrative Assignments</font>**
+**<span style="color: #b01861">Administrative Assignments</span>**
 | Period          | Name             | Position             |
 | --------------- | ---------------- | -------------------- |
 | 2022.08-2023.10 | MScBIS Programme | Class representative |

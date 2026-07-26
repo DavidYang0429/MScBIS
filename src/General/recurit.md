@@ -10,11 +10,18 @@ next: false
 
 新版 BIS Navigator 采用公开协作方式维护。发现过期信息、失效链接或缺失课程时，请前往项目 GitHub 仓库提交 Issue；愿意整理新一届经验的同学，也可以通过 Pull Request 贡献 Markdown 内容。
 
+- [提交内容过期或错误问题](https://github.com/DavidYang0429/MScBIS/issues/new)
+- [查看并参与 Pull Request](https://github.com/DavidYang0429/MScBIS/pulls)
+
 - 每条高时效事实请尽量附上 CityU 官方来源与核验日期。
 - 学生经验请注明适用学年，并避免把个人感受写成普遍结论。
 - 不要提交学号、私人联系方式、未公开课件或其他敏感资料。
 
-> 下方为原项目的 2025 招募记录，作为项目沿革保留；当前共建以 GitHub 仓库说明为准。
+::: info 内容状态
+**最后更新：** 2026-07-26<br>
+**当前入口：** GitHub Issue 与 Pull Request<br>
+**历史内容：** 下方为原项目的 2025 招募记录，作为项目沿革保留，不代表 2026/27 仍采用简历、笔试、面试或邮件投递。
+:::
 
 感谢你访问此页面，希望BIS Navigator确确实实带给了你帮助！
 
@@ -24,7 +31,7 @@ next: false
 
 那么点进来的你，有这个兴趣吗？
 
-__<font color=#b01861>诚挚邀请BIS 2025 Fall的你，加入维护BIS Navigator的队伍！</font>__
+__<span style="color: #b01861">诚挚邀请BIS 2025 Fall的你，加入维护BIS Navigator的队伍！</span>__
 
 我们希望你：
 
@@ -60,5 +67,9 @@ _不过很抱歉，没有钱拿🙇 （当然，也不用花一分钱）_
 ## Ready? Fight
 
 请在简历与邮件表明投递方向
+
+::: warning 2025 历史投递入口
+下方邮箱只作为原招募记录保留，不再作为当前共建入口。请使用页面顶部的 GitHub Issue 或 Pull Request。
+:::
 
 [感兴趣的学弟学妹，请附个人CV，点此进行投递~](mailto:WANG%20Guanzhang<Guanzhang.WANG@my.cityu.edu.hk>?subject=The%20BIS%20Navigator%20Application%202025)
