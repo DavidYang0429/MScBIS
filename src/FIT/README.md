@@ -8,6 +8,14 @@ prev: false
 next: false
 ---
 
+::: info 官方核对状态
+**最后核对：** 2026-07-26
+
+**依据：** CityUHK 2026 入学项目页（页面最后更新于 2026-01-16）与 Information Systems 学系项目页。
+
+**使用边界：** 下列课程属于 2026 入学项目公布的课程结构；实际开课学期、名额、教师与注册方式仍以当期 Master Class Schedule、AIMS 和项目通知为准。
+:::
+
 **分流领导：**
 
 <VPBanner
@@ -48,8 +56,20 @@ FIT分流课程提供给具有中等IT/IS或金融/会计知识的申请人（�
 | ------------------- | -------------------------------------- |
 | [IS5010](FIT_Elective/IS5010.md) | Introduction to Financial Technologies |
 | [EF5052](FIT_Elective/EF5052.md) | Investment                             |
-| [IS6941](FIT_Elective/IS6941.md) | Big Data & Social Media Analytics      |
+| [IS6941](FIT_Elective/IS6941.md) | Machine Learning & Social Media Analytics |
 
 要开始浏览这些课程，可点击表格中的课程项目，或从左侧选单选择课程。
 
 如您正在使用移动设备，使用左上角的菜单键进行访问。
+
+## 官方来源
+
+- [CityUHK：MSc BIS（FIT，2026 入学）](https://www.cityu.edu.hk/en/pg/programme/program-list/2026/college-of-business/department-of-information-systems/p05b)
+- [Department of Information Systems：FIT Stream](https://www.cb.cityu.edu.hk/en/is/postgraduate-degrees/taught-postgraduate/msc-business-information-systems/fit-stream)
+
+## 更新记录
+
+<div class="reference-update-log">
+  <p><strong>2026-07-26</strong></p>
+  <p>复核 FIT 培养目标、15 学分核心课程组和 15 学分选修要求；按 2026 入学官方项目页将 IS6941 名称更新为 Machine Learning &amp; Social Media Analytics，并补充开课状态边界。</p>
+</div>
