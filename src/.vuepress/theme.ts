@@ -3,18 +3,18 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://DavidYang0429.github.io/MScBIS/",
 
   author: {
     name: "BIS Navigator",
   },
 
-  favicon: "/favicon.ico",
+  favicon: "/assets/image/bis-navigator-logo.png",
 
 
-  logo: "/logo.png",
+  logo: "/assets/image/bis-navigator-logo.png",
 
-  repo: "AvalonC/MscBIS",
+  repo: "DavidYang0429/MScBIS",
 
   docsDir: "src",
 
@@ -23,12 +23,14 @@ export default hopeTheme({
 
   repoDisplay: false,
 
+  darkmode: "disable",
+
   // sidebar
   sidebar,
 
   breadcrumb: false,
 
-  footer: "Profession, Creative, For the world",
+  footer: "民间维护 · 非 CityU 官方网站 · 资料仅供学习交流与参考",
 
   displayFooter: true,
 
@@ -100,10 +102,10 @@ export default hopeTheme({
     // You should generate and use your own comment service    
     comment: {
       provider: "Giscus",
-      repo: "AvalonC/MScBIS",
-      repoId: "R_kgDOJuLGmQ",
+      repo: "DavidYang0429/MScBIS",
+      repoId: "R_kgDOTjvYPg",
       category: "Announcements",
-      categoryId: "DIC_kwDOJuLGmc4CbYdR",
+      categoryId: "DIC_kwDOTjvYPs4DB_Ih",
     },
 
         components: {
@@ -116,7 +118,7 @@ export default hopeTheme({
 
     copyright: {
       global: true,
-      disableSelection: true,
+      disableSelection: false,
     },
 
     // notice: [

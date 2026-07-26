@@ -1,16 +1,15 @@
 // you can change colors here
 
 $bg-color: (
-    light:#fdfdfd,
-    dark:rgb(0, 0, 0)
+    light: #fbf8f2,
+    dark: #17171b
 );
 
 $card-shadow: (
-    light: rgb(213, 213, 213),
-    dark: rgb(0, 0, 0)
+    light: rgb(86 68 56 / 12%),
+    dark: rgb(0 0 0 / 30%)
 );
 
-
-$font-family: "PingFang SC, Segoe UI, Microsoft Yahei, sans-serif";
-$font-family-heading: "PingFang SC, Segoe UI, Microsoft Yahei, sans-serif";
-$font-family-mono: "PingFang SC, Segoe UI, Microsoft Yahei, sans-serif"
+$font-family: '"Noto Sans SC", "PingFang SC", "Segoe UI", sans-serif';
+$font-family-heading: '"Noto Sans SC", "PingFang SC", "Segoe UI", sans-serif';
+$font-family-mono: '"SFMono-Regular", Consolas, "Liberation Mono", monospace';

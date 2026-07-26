@@ -36,19 +36,19 @@ export default sidebar({
     {
       text: "人工智能专题",
       icon: "bi-stars",
-      children: ["IS6/IS6423","IS6/IS6620","/FIT/Core_Course/IS5542"]
+      children: ["IS6/IS6423", "IS6/IS6620", "/FIT/Core_Course/IS5542"],
     },
     {
-      text: "较易选修",
-      icon: "bi-file-post",
+      text: "5000 级课程",
+      icon: "bi-5-square",
       prefix: "IS5/",
-      children: "structure"
+      children: "structure",
     },
     {
-      text: "较难选修",
-      icon: "bi-file-post",
+      text: "6000 级课程",
+      icon: "bi-6-square",
       prefix: "IS6/",
-      children: "structure"
+      children: "structure",
     },
-  ]
+  ],
 });

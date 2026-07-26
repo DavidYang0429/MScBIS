@@ -2,70 +2,76 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   {
-    text: "首页",
-    link: "/",
-    icon: "bi-house-fill"
+    text: "新生上手",
+    link: "/General/greenhand.html",
+    icon: "bi-compass",
   },
   {
-    text: "MIS方向",
-    link: "/MIS/",
-    icon: "bi-archive-fill"
-  },
-  {
-    text: "FIT方向",
-    link: "/FIT/",
-    icon: "bi-archive-fill"
-  },
-  {
-    text: "共享选修课池",
-    link: "/elective/",
-    icon: "bi-archive-fill"
-  },
-
-  {
-    text: "实用链接",
-    icon: "bi-lightbulb-fill",
-    prefix: "/Useful/",
+    text: "课程与选课",
+    icon: "bi-journal-bookmark",
     children: [
       {
-        text: "大学相关网站",
+        text: "专业方向",
         children: [
-          { text: "香港城市大学", icon: "bi-link-45deg", link: "https://www.cityu.edu.hk" },
-          { text: "商学院", icon: "bi-link-45deg", link: "https://www.cb.cityu.edu.hk" },
-          { text: "资讯系统学系", icon: "bi-link-45deg", link: "https://www.cb.cityu.edu.hk/is" },
-          { text: "项目官网", icon: "bi-link-45deg", link: "https://www.cb.cityu.edu.hk/is/postgraduate-degrees/taught-postgraduate/msc-business-information-systems" }
+          { text: "MIS 管理智能系统", icon: "bi-diagram-3", link: "/MIS/" },
+          { text: "FIT 金融与智能科技", icon: "bi-diagram-3", link: "/FIT/" },
+          { text: "共享选修课", icon: "bi-collection", link: "/elective/" },
         ],
       },
       {
-        text: "选课相关",
-        prefix: "CourseEnroll/",
+        text: "选课指南",
+        prefix: "/Useful/CourseEnroll/",
         children: [
-          { text: "选课基本流程", icon: "bi-bar-chart-steps", link: "how_to" },
-          { text: "流程有用信息", icon: "bi-info-circle-fill", link: "useful_data" },
-          { text: "选课数量安排", icon: "bi-calendar-week-fill", link: "time_arrangement" },
-          { text: "研究生交换项目（PGCE）", icon: "bi-send-check-fill", link: "pgce" },
-          { text: "CityU Schedule Planner下载", icon: "bi-cloud-download-fill", link: "extension" }
-        ]
+          { text: "选课基本流程", icon: "bi-signpost-split", link: "how_to" },
+          { text: "选课规则与提示", icon: "bi-info-circle", link: "useful_data" },
+          { text: "课程数量与时间安排", icon: "bi-calendar-week", link: "time_arrangement" },
+          { text: "CityU Schedule Planner", icon: "bi-calendar3", link: "extension" },
+        ],
       },
-      {
-        text: "学在城大 Learning@CityU",
-        prefix: "Learning/",
-        children: [
-          { text: "BIS资源网盘", icon: "bi-hdd-network-fill", link: "BIS_resource" },
-          { text: "留服认证", icon: "bi-file-earmark-break-fill", link: "cscse_reco" },
-          { text: "转换专业认证", icon: "bi-person-lines-fill", link: "trans_mse_tutorial" }
-        ]
-      }
     ],
   },
   {
-    text: "技术支持文档",
-    icon: "bi-file-code-fill",
-    prefix: "/Tech/",
+    text: "学在城大",
+    icon: "bi-building",
     children: [
-      { text: "信息技术服务", icon: "bi-link", link: "it_services" },
-      { text: "在线学习平台Canvas", icon: "bi-link", link: "Canvas" },
-      { text: "在线综合平台CityU Portal", icon: "bi-link", link: "CityU_Portal" }
-    ]
-  }
+      {
+        text: "校内系统",
+        prefix: "/Tech/",
+        children: [
+          { text: "CityU Portal", icon: "bi-grid", link: "CityU_Portal" },
+          { text: "Canvas", icon: "bi-easel2", link: "Canvas" },
+          { text: "信息技术服务", icon: "bi-pc-display", link: "it_services" },
+        ],
+      },
+      {
+        text: "学习与认证",
+        prefix: "/Useful/Learning/",
+        children: [
+          { text: "BIS 资源网盘", icon: "bi-hdd-network", link: "BIS_resource" },
+          { text: "留服认证", icon: "bi-file-earmark-check", link: "cscse_reco" },
+          { text: "转换专业认证", icon: "bi-person-vcard", link: "trans_mse_tutorial" },
+        ],
+      },
+    ],
+  },
+  {
+    text: "实习与发展",
+    icon: "bi-briefcase",
+    children: [
+      { text: "商业实习课程", icon: "bi-buildings", link: "/elective/IS5/IS5238.html" },
+      { text: "就业方向", icon: "bi-signpost", link: "/General/greenhand.html#就业方向" },
+      { text: "校友寄言", icon: "bi-chat-quote", link: "/General/alumni_share.html" },
+      { text: "研究生交换项目", icon: "bi-send-check", link: "/Useful/CourseEnroll/pgce.html" },
+    ],
+  },
+  {
+    text: "关于与共建",
+    icon: "bi-people",
+    children: [
+      { text: "关于本站", icon: "bi-info-circle", link: "/General/about.html" },
+      { text: "参与维护", icon: "bi-github", link: "/General/recurit.html" },
+      { text: "致谢", icon: "bi-heart", link: "/General/appreciate.html" },
+      { text: "名人堂", icon: "bi-award", link: "/General/Hall_of_Fame.html" },
+    ],
+  },
 ]);

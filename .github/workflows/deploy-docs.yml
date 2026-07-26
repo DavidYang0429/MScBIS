@@ -23,8 +23,8 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          # 选择要使用的 pnpm 版本
-          version: 10
+          # 与 package.json 中声明的版本保持一致
+          version: 11.9.0
           # 使用 pnpm 安装依赖
           run_install: true
 
