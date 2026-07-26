@@ -4,8 +4,10 @@ import theme from "./theme.js";
 import { enterpriseApplicationPlugin } from "./plugins/enterprise-application";
 import { editorialHomePlugin } from "./plugins/editorial-home";
 
+const isVercelBuild = process.env.VERCEL === "1";
+
 export default defineUserConfig({
-  base: "/MScBIS/",
+  base: isVercelBuild ? "/" : "/MScBIS/",
   lang: "zh-CN",
   title: "BIS Navigator",
   description: "由城大 BIS 在读生与校友共同维护的中文学生手册",

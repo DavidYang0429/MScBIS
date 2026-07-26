@@ -2,8 +2,14 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
+const vercelProductionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+const siteHostname =
+  process.env.VERCEL === "1" && vercelProductionHost
+    ? `https://${vercelProductionHost}`
+    : "https://davidyang0429.github.io";
+
 export default hopeTheme({
-  hostname: "https://davidyang0429.github.io",
+  hostname: siteHostname,
 
   author: {
     name: "BIS Navigator",
