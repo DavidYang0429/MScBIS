@@ -1,4 +1,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://DavidYang0429.github.io/MScBIS/MScBIS/sitemap.xml
+Sitemap: https://davidyang0429.github.io/MScBIS/sitemap.xml
