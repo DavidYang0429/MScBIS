@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://DavidYang0429.github.io/MScBIS/",
+  hostname: "https://davidyang0429.github.io",
 
   author: {
     name: "BIS Navigator",
