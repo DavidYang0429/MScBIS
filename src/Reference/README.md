@@ -1,7 +1,8 @@
 ---
 title: 香港生活与入学参考
 icon: bi-map
-pageClass: reference-page
+containerClass: reference-page
+article: false
 ---
 
 # 香港生活与入学参考
@@ -9,13 +10,6 @@ pageClass: reference-page
 <div class="reference-lead">
   <p>把“拿到 Offer 之后怎么办”拆成可以逐步完成的路径：先处理学生签证和出行文件，再完成城大注册与选课，最后安排住宿、香港身份证、通信、银行和信息安全。这里提供核对框架和官方入口，不替代你的 Offer、学校邮件、AIMS 状态或政府个案决定。</p>
 </div>
-
-::: info 内容状态
-**最后更新：** 2026-07-26<br>
-**适用范围：** 2026/27 学年 CityUHK BIS 非本地授课型硕士新生<br>
-**本次更新：** 从“留学工具”知识库筛选并重新编辑 16 篇城大及香港通用资料，新增阶段导航、官方来源层级与逐页更新记录。原知识库文件保持不变。<br>
-**维护者：** 杨欣睿 David（26 Fall BIS）
-:::
 
 ## 按阶段开始
 
@@ -45,6 +39,15 @@ pageClass: reference-page
     <span>识别假学校、假房东、假客服和冒充机构，建立付款前二次核验。</span>
   </a>
 </div>
+
+<details class="reference-status">
+  <summary><strong>内容状态</strong><span>核验至 2026-07-26 · 2026/27 学年</span></summary>
+  <div>
+    <p><strong>适用范围：</strong>2026/27 学年 CityUHK BIS 非本地授课型硕士新生</p>
+    <p><strong>本次更新：</strong>从“留学工具”知识库筛选并重新编辑 16 篇城大及香港通用资料，新增阶段导航、官方来源层级与逐页更新记录。原知识库文件保持不变。</p>
+    <p><strong>维护者：</strong>杨欣睿 David（26 Fall BIS）</p>
+  </div>
+</details>
 
 ## 信息怎么分层
 

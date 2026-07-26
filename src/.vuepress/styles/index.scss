@@ -170,6 +170,9 @@ body {
     padding-bottom: 0.8rem;
     border-bottom: 1px solid #ded9cf;
     font-size: clamp(2rem, 4vw, 2.8rem);
+    line-break: strict;
+    text-wrap: balance;
+    word-break: normal;
 }
 
 .theme-hope-content:not(.custom) h2 {
@@ -241,7 +244,20 @@ body {
 }
 
 .reference-page .vp-page-title {
-    display: none;
+    display: block;
+}
+
+.reference-page .vp-page-title h1 {
+    margin: 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #ded9cf;
+    color: #18283c;
+    font-family: "Noto Serif SC", "Songti SC", serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.3;
+    line-break: strict;
+    text-wrap: balance;
 }
 
 .reference-lead p {
@@ -298,6 +314,38 @@ body {
     margin: 0.35rem 0;
 }
 
+.reference-status {
+    margin: 1.25rem 0 2rem;
+    border: 1px solid #d7d0c4;
+    background: #f8f5ee;
+}
+
+.reference-status summary {
+    display: flex;
+    min-height: 52px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    color: #18283c;
+    cursor: pointer;
+}
+
+.reference-status summary span {
+    color: #66707b;
+    font-size: 0.82rem;
+}
+
+.reference-status > div {
+    padding: 0.8rem 1rem;
+    border-top: 1px solid #ded9cf;
+}
+
+.reference-status p {
+    margin: 0.4rem 0;
+}
+
 @media (max-width: 719px) {
     .reference-card-grid {
         grid-template-columns: 1fr;
@@ -305,6 +353,43 @@ body {
 
     .reference-lead {
         padding: 1.1rem 1.15rem;
+    }
+
+    .theme-hope-content:not(.custom) h1 {
+        font-size: clamp(1.8rem, 8.5vw, 2.2rem);
+        line-height: 1.35;
+    }
+
+    .reference-page .vp-page-title h1 {
+        font-size: clamp(1.8rem, 8.5vw, 2.2rem);
+    }
+
+    .reference-status summary {
+        display: grid;
+        gap: 0.1rem;
+    }
+
+    .vp-toggle-sidebar-button {
+        display: none;
+    }
+
+    .vp-toggle-navbar-button,
+    .slimsearch-button {
+        width: 44px;
+        min-width: 44px;
+        height: 44px;
+        min-height: 44px;
+    }
+
+    .vp-navbar .vp-brand {
+        margin-inline-start: 0.75rem;
+    }
+
+    .vp-toc-link {
+        display: flex;
+        min-height: 44px;
+        box-sizing: border-box;
+        align-items: center;
     }
 }
 

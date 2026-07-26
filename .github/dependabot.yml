@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      safe-runtime-updates:
+        update-types:
+          - minor
+          - patch
+    ignore:
+      - dependency-name: vuepress
+      - dependency-name: "@vuepress/*"
+      - dependency-name: "vuepress-theme-hope"
+      - dependency-name: "vuepress-plugin-*"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3

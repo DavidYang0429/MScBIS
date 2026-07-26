@@ -1,0 +1,53 @@
+name: 内容过期或事实纠错
+description: 报告日期、资格、课程、链接或官方流程已经变化
+title: "[内容纠错] "
+labels:
+  - content
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢帮助后续同学核对时效信息。请勿上传学号、证件、成绩单、签证或私人联系方式。
+  - type: input
+    id: page
+    attributes:
+      label: 页面链接
+      placeholder: https://mscbis.vercel.app/Reference/...
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 当前页面怎么写
+      description: 可摘录必要的一两句话，不要复制整篇材料。
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 建议如何修改
+      description: 说明适用学年、日期或个人条件。
+    validations:
+      required: true
+  - type: input
+    id: official_source
+    attributes:
+      label: 官方来源
+      description: 优先提供 CityUHK、香港特区政府或责任机构的当前页面。
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: verified_at
+    attributes:
+      label: 核验日期
+      placeholder: "2026-07-26"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我已移除个人敏感信息，并确认链接可公开访问。
+          required: true

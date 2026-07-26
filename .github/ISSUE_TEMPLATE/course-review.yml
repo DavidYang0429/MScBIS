@@ -1,0 +1,64 @@
+name: 补充课程评价
+description: 提交带学年、方向和使用边界的课程经验
+title: "[课程评价] 课程代码 - 学年"
+labels:
+  - course-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        课程评价属于个人经验，不代表当前统一规则。请勿上传未公开课件、考试题、成绩单或教师私人信息。
+  - type: input
+    id: course
+    attributes:
+      label: 课程代码与名称
+      placeholder: IS0000 - Course Name
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: 你的方向
+      options:
+        - MIS
+        - FIT
+        - 其他专业选修
+    validations:
+      required: true
+  - type: input
+    id: term
+    attributes:
+      label: 修读学期
+      placeholder: "2026/27 Semester A"
+    validations:
+      required: true
+  - type: textarea
+    id: structure
+    attributes:
+      label: 当学期教学与考核结构
+      description: 只描述你实际经历的当学期，并提醒读者以教师最新公布为准。
+    validations:
+      required: true
+  - type: textarea
+    id: workload
+    attributes:
+      label: 工作量与先修基础
+      description: 说明作业节奏、项目协作、编程或数学基础，不要只给“水／难”的结论。
+    validations:
+      required: true
+  - type: textarea
+    id: learning
+    attributes:
+      label: 学到什么、适合谁
+      description: 可写就业关联和课程局限，但请区分事实与个人判断。
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: 发布确认
+      options:
+        - label: 我同意在保留 GitHub 署名和学年标记的前提下，将这段经验整理进本站。
+          required: true
+        - label: 我已移除个人敏感信息、未公开课件和考试内容。
+          required: true

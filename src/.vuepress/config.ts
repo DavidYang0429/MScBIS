@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
+import { communityCommentsPlugin } from "./plugins/community-comments";
 import { enterpriseApplicationPlugin } from "./plugins/enterprise-application";
 import { editorialHomePlugin } from "./plugins/editorial-home";
 
@@ -10,7 +11,8 @@ export default defineUserConfig({
   base: isVercelBuild ? "/" : "/MScBIS/",
   lang: "zh-CN",
   title: "BIS Navigator",
-  description: "由城大 BIS 在读生与校友共同维护的中文学生手册",
+  description:
+    "面向 CityUHK MSc Business Information Systems 学生的中文手册：入学生活、MIS/FIT 课程、选课、实习与历届经验。",
 
   theme,
   // Enable it with pwa
@@ -18,6 +20,7 @@ export default defineUserConfig({
 
 
   plugins: [
+    communityCommentsPlugin(),
     editorialHomePlugin(),
     enterpriseApplicationPlugin({
       dataPath: "/test.csv", // 相对于public目录
