@@ -8,8 +8,8 @@ title: 2026/27 新生指南
 ## 先从这三件事开始
 
 1. **确认录取条件与材料状态**：在 Application Admission System 核对 Conditional Offer 条件、截止时间与文件状态。
-2. **熟悉学校系统**：提前了解 [CityU Portal](/Tech/CityU_Portal.html)、Canvas 与 AIMS，选课结果和个人课表以系统显示为准。
-3. **理解专业路径**：先比较 [MIS](/MIS/) 与 [FIT](/FIT/) 的课程结构，再结合本学年实际开课状态制定选课方案。
+2. **熟悉学校系统**：提前了解 [CityU Portal](../Tech/CityU_Portal.html)、Canvas 与 AIMS，选课结果和个人课表以系统显示为准。
+3. **理解专业路径**：先比较 [MIS](../MIS/) 与 [FIT](../FIT/) 的课程结构，再结合本学年实际开课状态制定选课方案。
 
 ::: warning 时效说明
 本站是学生与校友维护的民间指南，不代表 CityU 官方意见。遇到本站与官方通知不一致时，请始终以官方通知为准。

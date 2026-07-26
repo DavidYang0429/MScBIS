@@ -33,5 +33,6 @@
 - Mobile CTA targets are 50 px high; visible content remains keyboard-addressable and uses semantic links and headings.
 - Generated hero and logo assets retain their intended aspect ratios and remain sharp at their rendered sizes.
 - Browser console contains no runtime errors. Remaining development warnings are inherited VuePress sidebar notices and Lit development-mode notices.
+- Live Pages verification found that three newly added Markdown links bypassed the `/MScBIS/` base path; they were changed to relative document links and rebuilt before final handoff.
 
 final result: passed
