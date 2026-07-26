@@ -1,4 +1,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://davidyang0429.github.io/MScBIS/sitemap.xml
+Sitemap: https://mscbis.vercel.app/MScBIS/sitemap.xml
