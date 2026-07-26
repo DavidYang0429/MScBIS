@@ -3,41 +3,56 @@ import { withBase } from "vuepress/client";
 
 const updates = [
   {
+    icon: "bi-map",
+    title: "入学与生活",
+    detail: "签证、注册、选课、住宿、HKID、银行与安全按阶段整理",
+    link: "/Reference/",
+  },
+  {
+    icon: "bi-briefcase",
+    title: "职业与实习",
+    detail: "区分 IS5238、CPP、校内职业服务、在读工作与 IANG",
+    link: "/Career/",
+  },
+  {
+    icon: "bi-shield-check",
+    title: "AI 与学术诚信",
+    detail: "依据城大官方指引明确允许使用、核验与披露边界",
+    link: "/Useful/Learning/ai_academic_integrity.html",
+  },
+  {
     icon: "bi-journal-check",
-    title: "课程与方向",
-    detail: "以官方项目页面作为当前事实基线",
-    link: "/MIS/",
-  },
-  {
-    icon: "bi-calendar2-check",
-    title: "开课状态",
-    detail: "区分本学年开设、待核验与历史内容",
-    link: "/elective/",
-  },
-  {
-    icon: "bi-archive",
-    title: "学生经验",
-    detail: "2022 / 2023 届心得保留并按年份归档",
-    link: "/MIS/Core_Course/IS5311.html",
-  },
-  {
-    icon: "bi-github",
-    title: "共同维护",
-    detail: "通过 GitHub 提交更正、补充与新一届经验",
-    link: "/General/recurit.html",
+    title: "课程状态复核",
+    detail: "MIS、FIT 与部分选修课加入官方来源和日期化记录",
+    link: "/FIT/",
   },
 ];
 
 const newcomerLinks = [
-  { label: "入学前准备清单", link: "/General/greenhand.html" },
-  { label: "第一学期关键流程", link: "/Useful/CourseEnroll/how_to.html" },
-  { label: "必读系统与办事入口", link: "/Tech/CityU_Portal.html" },
+  { label: "行前与学生签证", link: "/Reference/before-arrival.html" },
+  { label: "城大注册与学生证", link: "/Reference/cityu-onboarding.html" },
+  { label: "宿舍、租房与盖印", link: "/Reference/housing.html" },
 ];
 
 const courseLinks = [
   { label: "比较 MIS 与 FIT", link: "/MIS/" },
   { label: "浏览共享选修课", link: "/elective/" },
-  { label: "选课策略与注意事项", link: "/Useful/CourseEnroll/useful_data.html" },
+  {
+    label: "AI 使用与学术诚信",
+    link: "/Useful/Learning/ai_academic_integrity.html",
+  },
+];
+
+const careerLinks = [
+  {
+    label: "实习与校内职业服务",
+    link: "/Career/internship-and-services.html",
+  },
+  {
+    label: "非本地生工作与 IANG",
+    link: "/Career/work-and-iang.html",
+  },
+  { label: "IS5238 商业实习课程", link: "/elective/IS5/IS5238.html" },
 ];
 </script>
 
@@ -51,15 +66,15 @@ const courseLinks = [
           把 <span>BIS</span> 读明白
         </h1>
         <p class="hero-description">
-          这是由在读生与校友共同维护的中文指南，帮你快速了解本学年变化、理清路径、少走弯路。
+          从学生签证、城大注册和住宿，到选课、实习与 IANG；以官方资料作为当前事实基线，同时保留历届学生经验。
         </p>
         <div class="hero-actions" aria-label="首页主要入口">
-          <RouterLink class="primary-action" to="/General/greenhand.html">
-            查看 2026/27 学年指南
+          <RouterLink class="primary-action" to="/Reference/">
+            从入学与生活开始
             <i class="bi bi-arrow-right" aria-hidden="true" />
           </RouterLink>
-          <RouterLink class="secondary-action" to="/MIS/">
-            比较 MIS 与 FIT
+          <RouterLink class="secondary-action" to="/Career/">
+            查看实习与发展
             <i class="bi bi-arrow-right" aria-hidden="true" />
           </RouterLink>
         </div>
@@ -88,7 +103,7 @@ const courseLinks = [
       <div class="changes-column">
         <div class="section-heading">
           <span />
-          <h2>本学年最重要的变化</h2>
+          <h2>2026/27 本次更新</h2>
         </div>
         <ul class="update-list">
           <li v-for="item in updates" :key="item.title">
@@ -110,8 +125,8 @@ const courseLinks = [
         <div class="path-icon">
           <i class="bi bi-person" aria-hidden="true" />
         </div>
-        <h2>我是新生</h2>
-        <p>从入学准备到第一学期，按阶段了解你需要知道的关键事项。</p>
+        <h2>我要准备入学</h2>
+        <p>从签证、注册到住宿，按抵港前后的真实顺序逐项完成。</p>
         <ul>
           <li v-for="item in newcomerLinks" :key="item.label">
             <RouterLink :to="item.link">
@@ -120,8 +135,8 @@ const courseLinks = [
             </RouterLink>
           </li>
         </ul>
-        <RouterLink class="text-link" to="/General/greenhand.html">
-          进入新生指南
+        <RouterLink class="text-link" to="/Reference/">
+          进入入学与生活
           <i class="bi bi-arrow-right" aria-hidden="true" />
         </RouterLink>
       </div>
@@ -130,8 +145,8 @@ const courseLinks = [
         <div class="path-icon">
           <i class="bi bi-book" aria-hidden="true" />
         </div>
-        <h2>我正在选课</h2>
-        <p>理解课程体系与选课策略，找到适合你的课程组合。</p>
+        <h2>我正在读 BIS</h2>
+        <p>理解培养方向、选课结构和 AI 使用边界，区分官方规则与历史经验。</p>
         <ul>
           <li v-for="item in courseLinks" :key="item.label">
             <RouterLink :to="item.link">
@@ -142,6 +157,26 @@ const courseLinks = [
         </ul>
         <RouterLink class="text-link" to="/Useful/CourseEnroll/how_to.html">
           进入选课指南
+          <i class="bi bi-arrow-right" aria-hidden="true" />
+        </RouterLink>
+      </div>
+
+      <div class="path-column">
+        <div class="path-icon">
+          <i class="bi bi-briefcase" aria-hidden="true" />
+        </div>
+        <h2>我在准备实习</h2>
+        <p>找到课程实习和校内职业服务，并核对非本地生工作与毕业后的 IANG 条件。</p>
+        <ul>
+          <li v-for="item in careerLinks" :key="item.label">
+            <RouterLink :to="item.link">
+              {{ item.label }}
+              <i class="bi bi-chevron-right" aria-hidden="true" />
+            </RouterLink>
+          </li>
+        </ul>
+        <RouterLink class="text-link" to="/Career/">
+          进入职业与实习导航
           <i class="bi bi-arrow-right" aria-hidden="true" />
         </RouterLink>
       </div>
@@ -297,7 +332,7 @@ const courseLinks = [
 
 .editorial-overview {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) repeat(2, minmax(0, 0.85fr));
+  grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(0, 0.78fr));
   min-height: 350px;
   border-bottom: 1px solid var(--editorial-line);
 }
@@ -443,6 +478,27 @@ const courseLinks = [
   line-height: 1.7;
 }
 
+@media (max-width: 1199px) {
+  .editorial-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .changes-column {
+    grid-column: 1 / -1;
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  .changes-column + .path-column {
+    padding-left: 0;
+  }
+
+  .path-column:last-child {
+    padding-right: 0;
+  }
+}
+
 @media (max-width: 959px) {
   .editorial-home {
     width: min(100% - 40px, 760px);
@@ -462,22 +518,22 @@ const courseLinks = [
   }
 
   .editorial-overview {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .changes-column {
-    grid-column: 1 / -1;
     padding-right: 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--editorial-line);
   }
 
   .path-column {
+    padding-right: 0;
     padding-left: 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--editorial-line);
   }
 
   .path-column + .path-column {
-    padding-right: 0;
+    border-left: 0;
   }
 }
 
