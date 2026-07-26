@@ -8,6 +8,13 @@ prev: false
 next: false
 ---
 
+::: caution 内容状态｜流程待复核
+**状态标记：** 2026-07-26<br>
+**当前用途：** 保留往届操作方法与常见概念。<br>
+**使用边界：** 页面截图、日期、入口和系统规则尚未按 2026/27 全量复核；执行前请回到文中链接的 CityUHK 官方页面、AIMS 与个人通知确认。
+:::
+
+
 ## 前言
 
 本文将会阐述如何在CityU *不走弯路* 的进行选课
@@ -38,7 +45,7 @@ next: false
 
 --
 
-你可以通过周亦卿研究生院的[<font color=#b01861>Important Dates</font>](https://www.cityu.edu.hk/sgs/student/tpg/importantdates)页面来查阅时间节点
+你可以通过周亦卿研究生院的[<span style="color: #b01861">Important Dates</span>](https://www.cityu.edu.hk/sgs/student/tpg/importantdates)页面来查阅时间节点
 
 --
 
@@ -48,10 +55,10 @@ next: false
 
 一般的，大学会告知你:
 
-1. <font color=#b01861>查看课程</font>的时间
-2. <font color=#b01861>非网选课程的选课</font>开始时间
-3. <font color=#b01861>网选课程的选课</font>开始时间
-4. 选课<font color=#b01861>截止时间</font>
+1. <span style="color: #b01861">查看课程</span>的时间
+2. <span style="color: #b01861">非网选课程的选课</span>开始时间
+3. <span style="color: #b01861">网选课程的选课</span>开始时间
+4. 选课<span style="color: #b01861">截止时间</span>
 5. 其他重要时间
 
 --
@@ -70,9 +77,9 @@ next: false
 
 --
 
-在 **<font color=#b01861>Release of Master Class Schedule for the academic year</font>** 这天之后
+在 **<span style="color: #b01861">Release of Master Class Schedule for the academic year</span>** 这天之后
 
-就可以在CityU Administrative Information Management System (简称<font color=#b01861>AIMS</font>)中查看本学年将要开放的课程。
+就可以在CityU Administrative Information Management System (简称<span style="color: #b01861">AIMS</span>)中查看本学年将要开放的课程。
 
 --
 
@@ -132,6 +139,7 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
 当你选择了上图中某一门课程时，你将会看到与下方结构十分类似的表格
 
 <table>
+<tbody>
     <tr>
       <th>CRN</th>
       <th>Section</th>
@@ -149,7 +157,7 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
       <td>11877</td>
       <td>S01</td>
       <td>3</td>
-      <td><font _mstmutation="1">Main Campus</font><br></td>
+      <td><span>Main Campus</span><br></td>
       <td>Y</td>
       <td>B</td>
       <td>70</td>
@@ -165,11 +173,12 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
       <td colspan="5"></td>
       <td colspan="11">not for Major: AC</td>
     </tr>
+</tbody>
 </table>
 
 --
 
-你需要记录 **<font color=#b01861>CRN</font>** 用以选课
+你需要记录 **<span style="color: #b01861">CRN</span>** 用以选课
 
 同时，你需要关注这门课程的相关信息
 
@@ -187,7 +196,7 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
 
 ### 1. 了解何时选课
 
-   不知道时间是无法做好准备的！你可以通过周亦卿研究生院的[<font color=#b01861>Important Dates</font>](https://www.cityu.edu.hk/sgs/student/tpg/importantdates)页面来查阅时间节点
+   不知道时间是无法做好准备的！你可以通过周亦卿研究生院的[<span style="color: #b01861">Important Dates</span>](https://www.cityu.edu.hk/sgs/student/tpg/importantdates)页面来查阅时间节点
 
    ::: warning 大学差异
    请注意，海外大学<u>不会</u>时刻提醒你各种截止时间，本着对自己的负责的原则，<u>重要的信息需要自己采集。</u>
@@ -196,10 +205,10 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
 
    一般的，大学会告知你:
 
-   1. <font color=#b01861>查看课程</font>的时间
-   2. <font color=#b01861>非网选课程的选课</font>开始时间
-   3. <font color=#b01861>网选课程的选课</font>开始时间
-   4. 选课<font color=#b01861>截止时间</font>
+   1. <span style="color: #b01861">查看课程</span>的时间
+   2. <span style="color: #b01861">非网选课程的选课</span>开始时间
+   3. <span style="color: #b01861">网选课程的选课</span>开始时间
+   4. 选课<span style="color: #b01861">截止时间</span>
    5. 其他重要时间
 
    这些时间往往并不一致，请对公布的所有事宜时间做到心中有数
@@ -208,22 +217,22 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
 
    根据自己的需求修读课程十分重要，因此需要提前了解本学期会开放什么课程。
 
-   在CityU Administrative Information Management System (简称<font color=#b01861>AIMS</font>)中，在 **<font color=#b01861>Release of Master Class Schedule for the academic year</font>** 这天之后，就可以查看本学年将要开放的课程。
+   在CityU Administrative Information Management System (简称<span style="color: #b01861">AIMS</span>)中，在 **<span style="color: #b01861">Release of Master Class Schedule for the academic year</span>** 这天之后，就可以查看本学年将要开放的课程。
 
    操作流程如下：
 
    1. 访问[CityU AIMS](https://banweb.cityu.edu.hk), 并以你的EID登录
 
-   2. 点击 "**<font color=#b01861>Course Registration</font>**"
+   2. 点击 "**<span style="color: #b01861">Course Registration</span>**"
    ![AIMS Page](/AIMS_1.png)
 
-   3. 选择 "**<font color=#b01861>Web Add/Drop</font>**"选项
+   3. 选择 "**<span style="color: #b01861">Web Add/Drop</span>**"选项
    ![AIMS Page](/AIMS_2.png)
 
-   4. 在新页面右上角，选择 "**<font color=#b01861>Master Class Schedule</font>**"。
+   4. 在新页面右上角，选择 "**<span style="color: #b01861">Master Class Schedule</span>**"。
    ![AIMS Page](/AIMS_3.png)
 
-   5. 在新页面中，选择你想查阅的学期，选择完毕后点击"**<font color=#b01861>Submit Term</font>**"
+   5. 在新页面中，选择你想查阅的学期，选择完毕后点击"**<span style="color: #b01861">Submit Term</span>**"
    ![AIMS Page](/AIMS_4.png)
 
    6. 在新页面中，你将需要配置相当多的选项来选课，这是AIMS提供的多元化检索服务。BIS是一个Postgraduate Degree Programme, 同时大部分课程均是以IS(Information Systems)开头，因此，只需要按照图片配置后点击"Search Class"就能查看到大部分课程。
@@ -245,6 +254,7 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
 当你选择了上图中某一门课程时，你将会看到与下图结构十分类似的表格（点击红色滚动条可完整查阅表格）
 
 <table>
+<tbody>
     <tr>
       <th>CRN</th>
       <th>Section</th>
@@ -262,7 +272,7 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
       <td>11877</td>
       <td>S01</td>
       <td>3</td>
-      <td><font _mstmutation="1">Main Campus</font><br></td>
+      <td><span>Main Campus</span><br></td>
       <td>Y</td>
       <td>B</td>
       <td>70</td>
@@ -278,9 +288,10 @@ _例如，想查阅EF5042，则应当将Offering Academic Unit 改为 Economics 
       <td colspan="5"></td>
       <td colspan="11">not for Major: AC</td>
     </tr>
-  </table>
+  </tbody>
+</table>
 
-你需要记录 **<font color=#b01861>CRN</font>** 用以选课
+你需要记录 **<span style="color: #b01861">CRN</span>** 用以选课
 
 同时，你需要关注这门课程的相关信息，你可以查阅[这里](./useful_data.html#b-master-class-schedule功能术语表-2023年6月16日版)来理解此表格内容。
 

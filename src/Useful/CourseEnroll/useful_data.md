@@ -8,6 +8,13 @@ prev: false
 next: false
 ---
 
+::: caution 内容状态｜流程待复核
+**状态标记：** 2026-07-26<br>
+**当前用途：** 保留往届操作方法与常见概念。<br>
+**使用边界：** 页面截图、日期、入口和系统规则尚未按 2026/27 全量复核；执行前请回到文中链接的 CityUHK 官方页面、AIMS 与个人通知确认。
+:::
+
+
 ::: warning 更新速度不及学校
 此页面信息仅提供参考，一切信息都应以ARRO官网数据为准，而不是本站。
 :::
@@ -72,6 +79,7 @@ next: false
 :::
 
 <table>
+<tbody>
     <tr id="c_hlight1">
         <td width="20%">Subject Code</td>
         <td width="80%">alphabets denoting code for the academic unit or for a particular study programme (see the Subject Code list behind)</td>
@@ -162,6 +170,7 @@ next: false
         <td>Registration Restrictions</td>
         <td>They are narratives under the course section show in the course section details (please see the registration restriction)</td>
     </tr>
+</tbody>
 </table>
 
 ## C. 选课限制（2023年6月16日版）
@@ -177,6 +186,7 @@ Some web-enabled courses have registration restrictions which only allow student
 If a course or section which is marked “only for College: CB” under the course section in the Master Class Schedule, it means the course section is restricted for students in College of Business to register.
 
 <table>
+<tbody>
     <tr>
       <th>CRN</th>
       <th>Section</th>
@@ -195,7 +205,7 @@ If a course or section which is marked “only for College: CB” under the cour
       <td>12881</td>
       <td>C01</td>
       <td>3</td>
-      <td><font _mstmutation="1">Main Campus</font><br></td>
+      <td><span>Main Campus</span><br></td>
       <td>Y</td>
       <td>B</td>
       <td>70</td>
@@ -205,13 +215,15 @@ If a course or section which is marked “only for College: CB” under the cour
     </tr>
     <tr>
       <td colspan="5"></td>
-      <td colspan="11"> <font color =#b01861>only for College: CB</font></td>
+      <td colspan="11"> <span style="color: #b01861">only for College: CB</span></td>
     </tr>
-  </table>
+  </tbody>
+</table>
 
 If a course or section which is marked "only for College: CB" and “not for Major AC” under the course section in the Master Class Schedule, it means the course can be taken by students in College of Business but except for those from AC (Accountancy) Major
 
 <table>
+<tbody>
     <tr>
       <th>CRN</th>
       <th>Section</th>
@@ -229,7 +241,7 @@ If a course or section which is marked "only for College: CB" and “not for Maj
       <td>11877</td>
       <td>S01</td>
       <td>3</td>
-      <td><font _mstmutation="1">Main Campus</font><br></td>
+      <td><span>Main Campus</span><br></td>
       <td>Y</td>
       <td>B</td>
       <td>70</td>
@@ -239,12 +251,13 @@ If a course or section which is marked "only for College: CB" and “not for Maj
     </tr>
     <tr>
       <td colspan="5"></td>
-      <td colspan="11"><font color =#b01861>only for College: CB</font></td>
+      <td colspan="11"><span style="color: #b01861">only for College: CB</span></td>
     </tr>
     <tr>
       <td colspan="5"></td>
-      <td colspan="11"><font color =#b01861>not for Major: AC</font></td>
+      <td colspan="11"><span style="color: #b01861">not for Major: AC</span></td>
     </tr>
+</tbody>
 </table>
 
 ## D. 选择网选课程流程（2023年6月16日版）

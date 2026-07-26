@@ -8,6 +8,13 @@ prev: false
 next: false
 ---
 
+::: caution 内容状态｜界面流程待复核
+**状态标记：** 2026-07-26<br>
+**当前用途：** 提供 CityUHK 系统的概念说明与往届操作路径。<br>
+**使用边界：** 截图、菜单名称和操作顺序可能随系统更新变化；登录后请以当前页面、学校 IT 服务说明和个人账户权限为准。
+:::
+
+
 ![Canvas](/Canvas.png)
 
 Canvas是海外高校常用的一种“学习管理系统（Learning Management System）”, 这一系统最大的优势在于可以提升教学与学习的效率。学生要通过这一系统完成所有与学习相关的事务 - 作业的查看与提交，课程文件的下载与上传，等等。
@@ -26,7 +33,7 @@ Canvas是海外高校常用的一种“学习管理系统（Learning Management 
 
 要开始使用Canvas, 则必须使用CityU EID登录Canvas
 
-CityU Canvas地址：[canvas.cityu.edu.hk]((https://canvas.cityu.edu.hk/))
+CityU Canvas地址：[canvas.cityu.edu.hk](https://canvas.cityu.edu.hk/)
 
 :::tip 移动客户端
 使用过Canvas的海本学生可以将本科的Canvas登出，通过CityU Canvas地址转换到CityU Canvas（仍然需要EID登录）

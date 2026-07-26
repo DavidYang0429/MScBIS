@@ -9,6 +9,13 @@ next: false
 author: 柴柴
 ---
 
+::: caution 内容状态｜2023/24 个人经验
+**状态标记：** 2026-07-26<br>
+**原始适用届别：** 2023 Fall BIS 学生申请、2024 年出行<br>
+**当前用途：** 保留申请决策、材料准备、面试与海外学习体验。<br>
+**使用边界：** 联系人、合作院校、语言要求、申请日期和课程要求每年都会变化，不能直接用于 2026/27 申请。CityUHK College of Business 当前官方页面显示，2026/27 PGCE 的申请期为 2025-11-01 至 2025-11-30；该轮次已结束。后续轮次请只以 [PGCE 官方说明](https://www.cb.cityu.edu.hk/exchange/cityu_student/postgrad/notes)和[官方申请日程](https://www.cb.cityu.edu.hk/exchange/cityu_student/postgrad/schedule)为准。
+:::
+
 ## 关于作者
 柴柴，MSc in Business Information Systems (Management of Information Systems) 2023 fall，获法国里昂商学院管理学硕士项目录取。
 
@@ -68,7 +75,7 @@ Cityu Timeline:
 - 23.11.10 给IS的交换咨询人Tse发邮件询问详情，转给Kammy，Kammy给了交换的信息和交换网站，交换网站基本上有大部分需要的信息，建议所有部分全部自己探索一遍，基本上就有个大概了。我当时还是信息太少有点茫然，且没仔细看网站信息，太傻了。
   - Kammy还给了一个很重要的人的Angie，Angie基本上负责CB那边交换流程上的所有问题，她基本上工作时间当天回复，效率非常高。
 - 23.11.15 交换申请网站提交部分申请，会有Angie自动邮件提醒。
-- 23.11.20 给BIS-MIS Programme Leader [Choon Ling SIA](../../MIS/README)发邮件，需要他签署一份Recommendation Form,申请网站有模板。SIA当日回复，要我直接去他办公室找他（LAU-6-269），如果他不在就把文件留给Kammy/Mark Mak。
+- 23.11.20 给BIS-MIS Programme Leader [Choon Ling SIA](/MIS/)发邮件，需要他签署一份Recommendation Form,申请网站有模板。SIA当日回复，要我直接去他办公室找他（LAU-6-269），如果他不在就把文件留给Kammy/Mark Mak。
 - 23.11.21 上午办公室找SIA不在，Form留给Kammy，下午Kammy发邮件，需要给她一份我的CV和justification（写明想要交换的原因）
 - 23.11.22 下午CV和justification邮件发给Kammy，1个小时后通知我去拿。
   - 当时还蛮着急的，因为本科学校的材料曾经让我一个星期天跑十次办公室还没搞定，很害怕截止时间搞不定文件。不过咱们IS系效率真的非常高，而且老师们都很NICE，很为学生着想~感动~夸夸
