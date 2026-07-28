@@ -21,7 +21,7 @@ jobs:
           # 如果你文档需要 Git 子模块，取消注释下一行
           # submodules: true
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           # 与 package.json 中声明的版本保持一致
           version: 11.9.0
