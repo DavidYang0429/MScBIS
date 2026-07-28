@@ -1,18 +1,38 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from "vue";
+import { computed, nextTick, onMounted, ref, watch } from "vue";
 import { useData } from "vuepress/client";
 
-interface LegacyDiscussion {
-  comments: number;
-  number: number;
+import legacyCommentArchiveSource from "../legacy-comments.generated.json";
+
+interface LegacyAuthor {
+  avatarUrl: string;
+  login: string;
+  url: string;
 }
 
-const LEGACY_REPOSITORY = {
-  repo: "AvalonC/MScBIS",
-  repoId: "R_kgDOJuLGmQ",
-  category: "Announcements",
-  categoryId: "DIC_kwDOJuLGmc4CbYdR",
-};
+interface LegacyEntry {
+  author: LegacyAuthor;
+  bodyHtml: string;
+  createdAt: string;
+  updatedAt: string;
+  url: string;
+}
+
+interface LegacyComment extends LegacyEntry {
+  replies: LegacyEntry[];
+}
+
+interface LegacyThread {
+  comments: LegacyComment[];
+  discussionNumber: number;
+  discussionUrl: string;
+}
+
+interface LegacyCommentArchive {
+  snapshotAt: string;
+  sourceRepository: string;
+  threads: Record<string, LegacyThread>;
+}
 
 const CURRENT_REPOSITORY = {
   repo: "DavidYang0429/MScBIS",
@@ -21,80 +41,62 @@ const CURRENT_REPOSITORY = {
   categoryId: "DIC_kwDOTjvYPs4DB_Ih",
 };
 
-const legacyDiscussions: Record<string, LegacyDiscussion> = {
-  "FIT/Core_Course/AC5511": { number: 3, comments: 4 },
-  "FIT/Core_Course/EF5042": { number: 9, comments: 4 },
-  "FIT/Core_Course/IS5540": { number: 4, comments: 5 },
-  "FIT/Core_Course/IS5740": { number: 2, comments: 6 },
-  "FIT/Core_Course/IS6400": { number: 7, comments: 4 },
-  "FIT/FIT_Elective/EF5052": { number: 13, comments: 3 },
-  "FIT/FIT_Elective/IS5010": { number: 16, comments: 2 },
-  "FIT/FIT_Elective/IS6941": { number: 11, comments: 1 },
-  "General/greenhand": { number: 23, comments: 0 },
-  "MIS/Core_Course/IS5311": { number: 8, comments: 2 },
-  "MIS/Core_Course/IS5312": { number: 5, comments: 9 },
-  "MIS/Core_Course/IS5313": { number: 18, comments: 1 },
-  "MIS/Core_Course/IS5411": { number: 20, comments: 4 },
-  "MIS/Core_Course/IS5413": { number: 6, comments: 5 },
-  "MIS/Core_Course/IS5540": { number: 22, comments: 2 },
-  "MIS/MIS_Elective/IS6335": { number: 19, comments: 4 },
-  "elective/IS5/IS5238": { number: 17, comments: 1 },
-  "elective/IS5/IS5314": { number: 15, comments: 1 },
-  "elective/IS5/IS5940": { number: 21, comments: 1 },
-  "elective/IS6/IS6200": { number: 12, comments: 2 },
-  "elective/IS6/IS6421": { number: 26, comments: 1 },
-  "elective/IS6/IS6423": { number: 24, comments: 2 },
-  "elective/IS6/IS6523": { number: 10, comments: 5 },
-  "elective/IS6/IS6620": { number: 25, comments: 2 },
-  "elective/IS6/IS6640": { number: 14, comments: 1 },
-  "elective/IS6/IS6930": { number: 27, comments: 1 },
-};
+const legacyCommentArchive =
+  legacyCommentArchiveSource as LegacyCommentArchive;
+const historicalDateFormatter = new Intl.DateTimeFormat("zh-HK", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "Asia/Hong_Kong",
+});
 
 const { frontmatter, page } = useData();
-const legacyDetails = ref<HTMLDetailsElement>();
-const legacyHost = ref<HTMLDivElement>();
-const currentDetails = ref<HTMLDetailsElement>();
 const currentHost = ref<HTMLDivElement>();
 
 let giscusReady: Promise<unknown> | undefined;
-let mountedLegacyIdentifier = "";
 let mountedCurrentIdentifier = "";
 
 const commentsEnabled = computed(() => frontmatter.value.comment !== false);
-const pageIdentifier = computed(() =>
-  page.value.path
-    .replace(/^\/+/u, "")
-    .replace(/\.html$/u, "")
-    .replace(/\/$/u, "") || "home",
+const pageIdentifier = computed(
+  () =>
+    page.value.path
+      .replace(/^\/+/u, "")
+      .replace(/\.html$/u, "")
+      .replace(/\/$/u, "") || "home",
 );
-const legacyDiscussion = computed(
-  () => legacyDiscussions[pageIdentifier.value],
+const legacyThread = computed(
+  () => legacyCommentArchive.threads[pageIdentifier.value],
 );
-const legacyDiscussionUrl = computed(() =>
-  legacyDiscussion.value
-    ? `https://github.com/AvalonC/MScBIS/discussions/${legacyDiscussion.value.number}`
-    : "",
+const legacyEntryCount = computed(
+  () =>
+    legacyThread.value?.comments.reduce(
+      (total, comment) => total + 1 + comment.replies.length,
+      0,
+    ) ?? 0,
 );
+const archiveSnapshotDate = historicalDateFormatter.format(
+  new Date(legacyCommentArchive.snapshotAt),
+);
+const formatHistoricalDate = (date: string): string =>
+  historicalDateFormatter.format(new Date(date));
 
 const ensureGiscus = (): Promise<unknown> =>
   (giscusReady ??= import("giscus"));
 
-const appendWidget = (
+const appendCurrentWidget = (
   host: HTMLDivElement,
-  repository: typeof CURRENT_REPOSITORY,
-  mapping: "number" | "specific",
-  term: string,
+  identifier: string,
 ): void => {
   host.replaceChildren();
 
   const widget = document.createElement("giscus-widget");
   const properties = {
-    repo: repository.repo,
-    repoId: repository.repoId,
-    category: repository.category,
-    categoryId: repository.categoryId,
-    mapping,
-    term,
+    repo: CURRENT_REPOSITORY.repo,
+    repoId: CURRENT_REPOSITORY.repoId,
+    category: CURRENT_REPOSITORY.category,
+    categoryId: CURRENT_REPOSITORY.categoryId,
+    mapping: "specific",
+    term: identifier,
     strict: "1",
     reactionsEnabled: "1",
     emitMetadata: "0",
@@ -108,51 +110,33 @@ const appendWidget = (
   host.append(widget);
 };
 
-const openLegacyComments = async (): Promise<void> => {
-  if (
-    !legacyDetails.value?.open ||
-    !legacyHost.value ||
-    !legacyDiscussion.value ||
-    mountedLegacyIdentifier === pageIdentifier.value
-  )
-    return;
+const mountCurrentComments = async (): Promise<void> => {
+  const identifier = pageIdentifier.value;
 
-  await ensureGiscus();
-  appendWidget(
-    legacyHost.value,
-    LEGACY_REPOSITORY,
-    "number",
-    String(legacyDiscussion.value.number),
-  );
-  mountedLegacyIdentifier = pageIdentifier.value;
-};
-
-const openCurrentComments = async (): Promise<void> => {
   if (
-    !currentDetails.value?.open ||
+    !commentsEnabled.value ||
     !currentHost.value ||
-    mountedCurrentIdentifier === pageIdentifier.value
+    mountedCurrentIdentifier === identifier
   )
     return;
 
   await ensureGiscus();
-  appendWidget(
-    currentHost.value,
-    CURRENT_REPOSITORY,
-    "specific",
-    pageIdentifier.value,
-  );
-  mountedCurrentIdentifier = pageIdentifier.value;
+
+  if (!currentHost.value || pageIdentifier.value !== identifier) return;
+
+  appendCurrentWidget(currentHost.value, identifier);
+  mountedCurrentIdentifier = identifier;
 };
+
+onMounted(() => {
+  void mountCurrentComments();
+});
 
 watch(pageIdentifier, async () => {
-  mountedLegacyIdentifier = "";
   mountedCurrentIdentifier = "";
-  await nextTick();
-  legacyDetails.value?.removeAttribute("open");
-  currentDetails.value?.removeAttribute("open");
-  legacyHost.value?.replaceChildren();
   currentHost.value?.replaceChildren();
+  await nextTick();
+  await mountCurrentComments();
 });
 </script>
 
@@ -170,43 +154,134 @@ watch(pageIdentifier, async () => {
       </span>
     </header>
 
-    <details
-      v-if="legacyDiscussion"
-      ref="legacyDetails"
-      class="community-comments__panel community-comments__panel--legacy"
-      @toggle="openLegacyComments"
+    <section
+      v-if="legacyThread?.comments.length"
+      class="community-comments__history"
+      aria-labelledby="legacy-comments-title"
     >
-      <summary>
-        <span>
-          <strong>旧站历史评论</strong>
-          <small>保留原作者、日期、回复与反应</small>
-        </span>
-        <b>{{ legacyDiscussion.comments }} 条</b>
-      </summary>
-      <div class="community-comments__note">
-        这组评论仍由原
-        <a :href="legacyDiscussionUrl" target="_blank" rel="noopener noreferrer">
-          AvalonC/MScBIS Discussion
-        </a>
-        保存。建议将新问题、纠错和经验写在下方的新评论区。
+      <div class="community-comments__section-heading">
+        <div>
+          <p>历史讨论</p>
+          <h3 id="legacy-comments-title">往届评论原样归档</h3>
+        </div>
+        <strong>{{ legacyEntryCount }} 条</strong>
       </div>
-      <div ref="legacyHost" class="community-comments__widget" />
-    </details>
 
-    <details
-      ref="currentDetails"
-      class="community-comments__panel"
-      @toggle="openCurrentComments"
-    >
-      <summary>
-        <span>
-          <strong>打开新评论区</strong>
-          <small>提问 · 纠错 · 补充课程或生活经验</small>
-        </span>
-        <b>GitHub</b>
-      </summary>
       <div class="community-comments__note">
-        新评论保存到
+        以下评论来自原
+        <a
+          :href="legacyThread.discussionUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          AvalonC/MScBIS Discussion #{{ legacyThread.discussionNumber }}
+        </a>
+        ，本站保留原作者、原始日期、回复关系和来源链接；归档快照更新于
+        {{ archiveSnapshotDate }}。历史评价只代表发布时的课程体验。
+      </div>
+
+      <div class="legacy-comments">
+        <article
+          v-for="comment in legacyThread.comments"
+          :key="comment.url"
+          class="legacy-comment"
+        >
+          <!-- bodyHtml 来自 GitHub GraphQL 已清理的 bodyHTML 字段。 -->
+          <div class="legacy-comment__body" v-html="comment.bodyHtml" />
+          <footer class="legacy-comment__meta">
+            <span class="legacy-comment__author">
+              <img
+                v-if="comment.author.avatarUrl"
+                :src="comment.author.avatarUrl"
+                alt=""
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+              <a
+                v-if="comment.author.url"
+                :href="comment.author.url"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ comment.author.login }}
+              </a>
+              <span v-else>{{ comment.author.login }}</span>
+            </span>
+            <span>
+              发表于
+              <time :datetime="comment.createdAt">
+                {{ formatHistoricalDate(comment.createdAt) }}
+              </time>
+            </span>
+            <a
+              :href="comment.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              查看原评论
+            </a>
+          </footer>
+
+          <div v-if="comment.replies.length" class="legacy-comment__replies">
+            <article
+              v-for="reply in comment.replies"
+              :key="reply.url"
+              class="legacy-comment legacy-comment--reply"
+            >
+              <div class="legacy-comment__body" v-html="reply.bodyHtml" />
+              <footer class="legacy-comment__meta">
+                <span class="legacy-comment__author">
+                  <img
+                    v-if="reply.author.avatarUrl"
+                    :src="reply.author.avatarUrl"
+                    alt=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                  <a
+                    v-if="reply.author.url"
+                    :href="reply.author.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {{ reply.author.login }}
+                  </a>
+                  <span v-else>{{ reply.author.login }}</span>
+                </span>
+                <span>
+                  回复于
+                  <time :datetime="reply.createdAt">
+                    {{ formatHistoricalDate(reply.createdAt) }}
+                  </time>
+                </span>
+                <a
+                  :href="reply.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  查看原回复
+                </a>
+              </footer>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section
+      class="community-comments__current"
+      aria-labelledby="current-comments-title"
+    >
+      <div class="community-comments__section-heading">
+        <div>
+          <p>继续讨论</p>
+          <h3 id="current-comments-title">提问、纠错或补充经验</h3>
+        </div>
+        <strong>GitHub</strong>
+      </div>
+      <div class="community-comments__note">
+        所有人都可以直接阅读；发表、回复或添加反应时需要登录 GitHub
+        并授权 Giscus。新评论保存到
         <a
           href="https://github.com/DavidYang0429/MScBIS/discussions"
           target="_blank"
@@ -214,10 +289,10 @@ watch(pageIdentifier, async () => {
         >
           DavidYang0429/MScBIS Discussions
         </a>
-        ，页面标识不依赖部署域名。
+        。
       </div>
       <div ref="currentHost" class="community-comments__widget" />
-    </details>
+    </section>
   </section>
 </template>
 
@@ -255,17 +330,18 @@ watch(pageIdentifier, async () => {
   line-height: 1.7;
 }
 
-.community-comments__panel {
+.community-comments__history,
+.community-comments__current {
   margin-top: 0.75rem;
   border: 1px solid #d7d0c4;
   background: #fffdf8;
 }
 
-.community-comments__panel--legacy {
+.community-comments__history {
   background: #f8f5ee;
 }
 
-.community-comments__panel summary {
+.community-comments__section-heading {
   display: flex;
   min-height: 52px;
   box-sizing: border-box;
@@ -273,37 +349,27 @@ watch(pageIdentifier, async () => {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.7rem 1rem;
-  cursor: pointer;
-  list-style-position: inside;
 }
 
-.community-comments__panel summary > span {
-  display: inline-flex;
-  flex: 1;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.4rem 0.8rem;
+.community-comments__section-heading p {
+  margin: 0 0 0.15rem;
+  color: #922f40;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
-.community-comments__panel summary strong {
+.community-comments__section-heading h3 {
+  margin: 0;
   color: #18283c;
+  font-family: "Noto Serif SC", "Songti SC", serif;
+  font-size: 1.05rem;
 }
 
-.community-comments__panel summary small {
-  color: #66707b;
-  font-size: 0.78rem;
-  font-weight: 400;
-}
-
-.community-comments__panel summary b {
+.community-comments__section-heading > strong {
   color: #922f40;
   font-size: 0.78rem;
   white-space: nowrap;
-}
-
-.community-comments__panel summary:focus-visible {
-  outline: 3px solid rgba(146, 47, 64, 0.34);
-  outline-offset: 2px;
 }
 
 .community-comments__note {
@@ -313,6 +379,75 @@ watch(pageIdentifier, async () => {
   color: #66707b;
   font-size: 0.82rem;
   line-height: 1.7;
+}
+
+.legacy-comments {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-top: 1px solid #e1dcd2;
+}
+
+.legacy-comment {
+  border: 1px solid #e2ddd4;
+  background: #fff;
+}
+
+.legacy-comment__body {
+  padding: 0.95rem 1rem 0.75rem;
+  overflow-wrap: anywhere;
+  color: #334154;
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.legacy-comment__body :deep(> :first-child) {
+  margin-top: 0;
+}
+
+.legacy-comment__body :deep(> :last-child) {
+  margin-bottom: 0;
+}
+
+.legacy-comment__body :deep(img) {
+  max-width: 100%;
+  height: auto;
+}
+
+.legacy-comment__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.8rem;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid #eee9df;
+  color: #697484;
+  font-size: 0.76rem;
+}
+
+.legacy-comment__author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  color: #26384f;
+  font-weight: 650;
+}
+
+.legacy-comment__author img {
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+}
+
+.legacy-comment__replies {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0 0.75rem 0.75rem 2rem;
+}
+
+.legacy-comment--reply {
+  border-left: 3px solid #c8aeb2;
+  background: #fbfaf7;
 }
 
 .community-comments__widget {
@@ -331,14 +466,23 @@ watch(pageIdentifier, async () => {
     margin-top: 2.25rem;
   }
 
-  .community-comments__panel summary {
-    min-height: 60px;
+  .community-comments__section-heading {
     padding: 0.7rem 0.8rem;
   }
 
-  .community-comments__panel summary > span {
-    display: grid;
-    gap: 0.1rem;
+  .legacy-comments {
+    padding: 0.75rem;
+  }
+
+  .legacy-comment__body,
+  .legacy-comment__meta {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+  }
+
+  .legacy-comment__replies {
+    padding-right: 0.5rem;
+    padding-left: 0.85rem;
   }
 
   .community-comments__widget {

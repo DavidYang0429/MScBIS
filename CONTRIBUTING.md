@@ -39,4 +39,4 @@
 
 ## 评论与历史内容
 
-旧站 Discussion 继续保存在 `AvalonC/MScBIS`，本站只通过 Giscus 原样展示，不复制作者身份或伪造时间。新的提问、纠错和经验保存在 `DavidYang0429/MScBIS`。
+旧站 Discussion 继续保存在 `AvalonC/MScBIS`。本站通过 `pnpm comments:sync-legacy` 生成本地归档快照，直接展示旧评论的原作者、发布日期、回复关系和来源链接，不把它们伪装成当前仓库的新评论。新的提问、纠错和经验通过 Giscus 保存在 `DavidYang0429/MScBIS`；公开阅读无需登录，发表、回复和添加反应需要登录 GitHub。

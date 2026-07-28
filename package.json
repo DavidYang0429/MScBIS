@@ -9,6 +9,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "comments:sync-legacy": "node scripts/sync-legacy-comments.mjs",
     "docs:build": "vuepress-vite build src",
     "docs:check": "pnpm docs:build && node scripts/check-links.mjs",
     "docs:check-links": "node scripts/check-links.mjs",

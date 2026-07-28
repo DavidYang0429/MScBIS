@@ -9,20 +9,27 @@
 | 内容与站点生成 | Markdown 内容位于 `src/`；使用 VuePress 2 与 VuePress Theme Hope 生成静态站点 |
 | 前端与构建链 | Vue 3.5、VuePress 2.0.0-rc.30、Theme Hope 2.0.0-rc.107、Vite 8、Rolldown、Vue Router 5 |
 | 信息架构 | `navbar.ts` 与 `sidebar.ts` 管理栏目；自定义 `editorial-home` 插件提供编辑型首页 |
-| 社区评论 | 自定义 `community-comments` 插件分开展示原项目历史评论与当前仓库新评论 |
+| 社区评论 | 自定义 `community-comments` 插件直接展示旧评论归档，并在同一区域加载当前仓库 Giscus |
 | 内容治理 | 页面状态标签、页面级更新记录、集中内容日志、贡献指南和结构化 Issue 模板 |
 | 质量检查 | 冻结锁文件安装、VuePress 构建、内部链接检查、Pull Request CI 与 Dependabot |
 | 部署 | Vercel 与 GitHub Pages 双部署；分别验证根路径和 `/MScBIS/` base path |
 
 ## 2026-07-28
 
+### 历史评论归档与统一展示
+
+- 将旧仓库 26 个 Discussion 中的 67 条主评论和 6 条回复生成为本地归档快照，保留原作者、原始日期、回复关系及原评论链接。
+- 页面不再要求读者点开“旧评论”和“新评论”两个折叠面板；旧评论直接展示，当前仓库 Giscus 紧随其后并采用临近视口时加载。
+- 新增 `pnpm comments:sync-legacy`，通过 GitHub GraphQL 重新生成归档，并在评论或回复超过查询分页上限时停止，避免静默生成不完整数据。
+- 查看公开评论无需登录；发表、回复和添加反应仍由 Giscus 通过 GitHub 授权完成。旧评论没有转移到当前仓库，也没有重新署名。
+
 ### VuePress 兼容组升级
 
 - 将 VuePress 从 2.0.0-rc.24 升至 rc.30、Theme Hope 从 rc.94 升至 rc.107、官方插件从 rc.112 升至 rc.130；Vue 保持 3.5.40 稳定版。
 - 构建链随兼容组更新为 Vite 8.1.5、Vue Router 5.2.0 与 Rolldown，并把 Node.js 最低版本声明为 `>=22.18.0`。
 - 固定 `sass-embedded` 1.99.0，并通过精确 overrides 处理兼容范围内已有修复的传递依赖；没有强行跨主版本覆盖尚未兼容的 PWA 构建依赖。
-- 保留 VuePress／Theme Hope、编辑型首页、双评论区和现有 Markdown 架构；没有把依赖升级与 VitePress 迁移混在同一变更中。
-- 完成冻结锁文件安装、GitHub Pages 与 Vercel 两种 base path 构建、桌面／移动端页面、搜索、路由及双评论区检查。详细证据与剩余依赖风险见依赖维护记录。
+- 保留 VuePress／Theme Hope、编辑型首页、社区评论和现有 Markdown 架构；没有把依赖升级与 VitePress 迁移混在同一变更中。
+- 完成冻结锁文件安装、GitHub Pages 与 Vercel 两种 base path 构建、桌面／移动端页面、搜索、路由及评论区检查。详细证据与剩余依赖风险见依赖维护记录。
 
 ## 2026-07-26
 
