@@ -102,7 +102,7 @@ export default hopeTheme({
     },
     blog: true,
     // Comments are rendered by the custom community-comments plugin so that
-    // legacy and current Discussions can coexist without changing authorship.
+    // archived legacy entries keep their attribution beside the current thread.
     comment: false,
 
     seo: {
