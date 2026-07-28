@@ -6,7 +6,6 @@
 - Desktop implementation: `design/implementation-home-desktop.png`
 - Mobile implementation: `design/implementation-home-mobile.png`
 - Tablet implementation: `design/implementation-home-tablet.png`
-- Same-frame comparisons: `design/desktop-comparison-pass-1.png`, `design/desktop-comparison-pass-2.png`
 - Desktop viewport: 1440 × 1024
 - Tablet viewport: 768 × 1024
 - Mobile viewport: 390 × 844
