@@ -9,6 +9,23 @@
 - 2026-07-26 起的记录按本站现行[内容状态与维护规则](./CONTENT_MAINTENANCE.md)整理；更早历史根据 Git 提交摘要归档，并不表示其中信息已按当前学年重新核验。
 - 系统、依赖、部署与评论功能等工程变化另见[系统架构更新日志](./ARCHITECTURE_CHANGELOG.md)。
 
+## 2026-07-30
+
+### 课程官方链接与任课教师边界
+
+- 为本站收录的 28 门课程（29 个 MIS／FIT／共享课程页面）补充 CityUHK 2026/27 固定目录课程页、官方课程 PDF 与 Master Class Schedule 查询说明直链。
+- 明确 `202627` 是 Catalogue 路径，不自动等于 PDF Effective Term，也不单独证明课程在 2026/27 实际开设。
+- 保留各课程原有教师资料和个人主页链接；在 27 个教师区块旁新增提示，说明公开课程页没有公布 2026/27 本学期分班任课教师，现有名单只作往届参考，当前安排须以 Master Class Schedule、AIMS、Canvas 或项目通知为准。
+- 没有因人员主页仍可访问而推断该教师继续教授对应课程，也没有删除往届评论或教师资料。
+- 对公开课程页已给出明确 2026/27 状态的课程补充摘要：EF5052 为 Semester A／B，IS5312、IS5313、IS5411、IS6400 为 Semester A，IS5314 为 Semester B；这些 Course Offering Term 均仍受官网“可能调整”提示约束。
+- 将 IS6421 的旧 `Not offering 2025` 标签更新为 `2026/27暂不开课`；课程仍在 MSc BIS 选修池中，但 2026/27 课程页当前显示 “Not offering in current academic year”。
+
+### IS6912 修读期与排课说明
+
+- 对照 [IS6912 2026/27 官方课程页](https://www.cityu.edu.hk/catalogue/pg/202627/course/IS6912.htm)和[官方课程 PDF](https://www.cityu.edu.hk/catalogue/pg/202627/course/IS6912.pdf)，确认课程为 6 学分，普通 MSBIS 学生的标准修读期为两个学期。
+- 课程页列出 Semester A 2026/27、Semester B 2026/27 与 Summer 2027；一学期完成的例外只适用于官方列明的 CityUHK（Dongguan）来港交换研究学生，并须取得指定批准。
+- 更新 IS6912 课程页及历史排课指南：保留 Semester A + B、Semester B + Summer 的往届示例，同时把 Summer 学分上限、导师、题目、注册及提交安排标为须按当期 AIMS、Canvas、项目通知和导师要求复核。
+
 ## 2026-07-28
 
 ### MSc BIS 培养方案与课程目录
