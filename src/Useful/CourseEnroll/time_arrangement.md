@@ -9,10 +9,12 @@ next: false
 ---
 
 ::: caution 内容状态｜历史排课示例
-**状态标记：** 2026-07-26<br>
+**状态标记：** 2026-07-30<br>
 **原始适用届别：** 2023 Fall<br>
 **当前用途：** 保留往届学生对 30 学分课程组合、毕业节奏与 IS6912 安排的推演方式。<br>
-**使用边界：** 下方毕业日期、课程开设与排课组合未按 2026/27 逐项复核，不能作为当前选课结论。CityUHK 已明确个人毕业日期取决于实际修读进度；请以 [硕士新生注册与毕业说明](https://www.cityu.edu.hk/sgs/student/masters/info-new-students/enrolment)、[硕士课程注册](https://www.cityu.edu.hk/sgs/student/masters/coursereg)及个人 AIMS 状态为准。
+**使用边界：** 下方毕业日期、一般学分负荷与排课组合属于 2023 Fall 历史示例，不能直接作为 2026/27 选课结论。CityUHK 已明确个人毕业日期取决于实际修读进度；请以 [硕士新生注册与毕业说明](https://www.cityu.edu.hk/sgs/student/masters/info-new-students/enrolment)、[硕士课程注册](https://www.cityu.edu.hk/sgs/student/masters/coursereg)及个人 AIMS 状态为准。
+
+**IS6912 当前核验：** [2026/27 官方课程页](https://www.cityu.edu.hk/catalogue/pg/202627/course/IS6912.htm)列出 6 学分、普通修读期两个学期，以及 Semester A 2026/27、Semester B 2026/27、Summer 2027；[官方课程 PDF](https://www.cityu.edu.hk/catalogue/pg/202627/course/IS6912.pdf)提供详细课程资料。一学期完成只适用于官方列明的特定 CityUHK（Dongguan）来港交换研究学生并须取得多重批准，不是普通 MSBIS 学生的通用选项。
 :::
 
 这篇文档将简单的描述选课与毕业时间的关系。
@@ -291,7 +293,9 @@ BIS的毕业要求是30学分，CityU绝大多数课程为3学分课程，这意
 
 ## 2. 选择IS6912
 
-IS6912是一门大学分课程，它一门课将占据6学分，并横跨两个学期，因此，你将受到如下影响：
+按 2026/27 官方课程页，IS6912 是 6 学分课程，普通 MSBIS 学生的标准修读期为两个学期。学系另一份 [2026/27 项目课程结构](https://www.cb.cityu.edu.hk/en/is/msbda)列出的常见组合是 Semester A + B 或 Semester B + Summer；下方图表仍是 2023 Fall 学生据此形成的排课示例，实际注册必须回到当期 AIMS、项目通知和导师要求确认。
+
+在普通两个学期修读路径下，你会受到如下影响：
 
 - 剩余可选课程数自9门减少为8门
 - CGPA将按照9门计算，你的GPA波动将会更加明显
@@ -387,7 +391,7 @@ IS6912是一门大学分课程，它一门课将占据6学分，并横跨两个�
 
 <hr>
 
-如果你选择在Semester B选择IS6912，那么你将**必须选修Summer Term**且在Summer Term时无法选择其他课程（因为Summer Term只能选一节）
+如果普通 MSBIS 学生在 Semester B 开始 IS6912，2026/27 学系课程结构列出的对应组合是 Semester B + Summer。下图保留 2023 Fall 的排课方式；“Summer 不能再选其他课程”是往届经验，本站没有从 2026/27 公开页面确认当前 Summer 学分上限，须以个人 AIMS 和项目通知为准。
 
 <table>
 <tbody>
@@ -435,7 +439,7 @@ IS6912是一门大学分课程，它一门课将占据6学分，并横跨两个�
         <td>ISXXXX</td>
         <td>ISXXXX</td>
     </tr>
-        <tr>
+    <tr>
         <td>ISXXXX</td>
         <td bgcolor="#b01861">
             <span style="color: white">UNAVALIABLE</span>
@@ -443,3 +447,10 @@ IS6912是一门大学分课程，它一门课将占据6学分，并横跨两个�
     </tr>
 </tbody>
 </table>
+
+## 更新记录
+
+<div class="reference-update-log">
+  <p><strong>2026-07-30</strong></p>
+  <p>补充 IS6912 2026/27 官方课程页、课程 PDF 与学系课程结构链接；确认普通修读期为两个学期，并把一学期例外限制在官方列明的 CityUHK（Dongguan）来港交换研究学生；将 Summer 选课上限及排课图明确标为 2023 Fall 历史经验。</p>
+</div>
